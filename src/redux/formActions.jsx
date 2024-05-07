@@ -14,7 +14,7 @@ export const submitFormFailure = (error) => ({
   error
 });
 
-export const submitForm = (email) => async (dispatch) => {
+export const submitForm = (email,username) => async (dispatch) => {
   dispatch(submitFormRequest());
 
   try {
@@ -26,6 +26,7 @@ export const submitForm = (email) => async (dispatch) => {
 
     await addDoc(collection(db, 'waitlist'), {
       email: email,
+      username:username,
       completed: false
     });
 

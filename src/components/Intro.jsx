@@ -23,9 +23,10 @@ const Intro = () => {
                 <JoinWaitListButton onClick={handleToggleModal} />
             </div>
             {/* Image Section */}
-            <div className="w-4/5 lg:w-2/5 px-4 md:h-[400px] lg:h-auto">
-                <img src="/ctx.png" alt="Your Alt Text" className="w-full h-full" />
+            <div className="w-4/5 lg:w-2/5 px-4 md:h-[400px] lg:h-auto mt-20 md:mt-0">
+                <img src="/ctx1.png" alt="Your Alt Text" className="w-full h-full" />
             </div>
+
 
             <Modal show={showModal} onClose={handleToggleModal} />
         </div>
