@@ -4,7 +4,7 @@ const CTX = () => {
     return (
         <div className="flex flex-col items-center justify-center my-60">
             <h2 className="text-3xl font-bold mb-4">What we offer</h2>
-            <p className="text-center">
+            <p className="text-center mx-10">
                 By joining our waitlist, you gain exclusive early access to our platform and its features.
             </p>
             <div className="flex flex-wrap justify-center mt-10">

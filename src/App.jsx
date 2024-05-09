@@ -4,16 +4,25 @@ import { BrowserRouter as Router,Routes,Route } from 'react-router-dom'
 import Landing from './pages/Landing'
 import NotFoundPage from './pages/NotFoundPage'
 import { ToastContainer, } from 'react-toastify';
+import routes from './routes/routes';
+import Header from './components/Header';
+import Footer from './components/Footer';
 function App() {
 
   return (
     <Router>
+    <div>
+      <Header /> 
       <Routes>
-      <Route path='/' element={<Landing/>} />
-      <Route path="*" element={<NotFoundPage />} />
+        {routes.map((route, index) => (
+          <Route key={index} {...route} />
+        ))}
+        <Route path="*" element={<NotFoundPage />} />
       </Routes>
-      <ToastContainer/>
-    </Router>
+      <Footer />
+      <ToastContainer />
+    </div>
+  </Router>
   )
 }
 

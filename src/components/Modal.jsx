@@ -51,6 +51,7 @@ const Modal = ({ show, onClose }) => {
     return (
         <Dialog open={show} handler={onClose}>
             <DialogHeader>Join Waitlist</DialogHeader>
+            
             <DialogBody>
                 <form onSubmit={handleSubmit}>
                     <div className="mb-4">
